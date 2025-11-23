@@ -65,7 +65,14 @@ vim.o.splitbelow = true
 --   and `:help lua-options-guide`
 vim.opt.termguicolors = true
 vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = {
+  tab = "▸ ",       -- Show tabs as ▸ followed by space
+  trail = "·",      -- Show trailing spaces as ·
+  extends = "⟩",    -- Show when line extends right
+  precedes = "⟨",   -- Show when line extends left
+  nbsp = "␣",       -- Show non-breaking space as ␣
+}
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
@@ -81,4 +88,9 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
-vim.o.autoindent = true
+-- Indentation settings
+vim.opt.tabstop = 4         -- Number of spaces a <Tab> counts for
+vim.opt.shiftwidth = 4      -- Size of an indent
+vim.opt.expandtab = true    -- Convert tabs to spaces
+vim.opt.smartindent = true  -- Smart autoindenting on new lines
+vim.opt.autoindent = true   -- Copy indent from current line when starting a new one

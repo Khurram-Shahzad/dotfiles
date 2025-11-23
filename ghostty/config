@@ -1,0 +1,7 @@
+theme = "Shades Of Purple"
+font-family = "Cascadia Code Regular Regular"
+font-size = 18
+adjust-cell-height = 70%
+cursor-style-blink = false
+window-width = 120
+window-height = 35
